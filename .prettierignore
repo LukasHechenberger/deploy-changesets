@@ -1,0 +1,5 @@
+
+node_modules
+services/svelte/.svelte-kit
+services/svelte/build
+services/svelte/static
