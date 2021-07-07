@@ -18,8 +18,7 @@ steps:
   - id: 'deploy revision with tag'
     name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
-    args:
-      [
+    args: [
         'beta',
         'run',
         'deploy',
@@ -32,7 +31,7 @@ steps:
         'gcr.io/${PROJECT_ID}/${_SERVICE_NAME}:${_PR_NUMBER}-${SHORT_SHA}',
         '--tag',
         'pr-${_PR_NUMBER}',
-        '--no-traffic',
+        # '--no-traffic',
       ]
 
   - id: 'link revision on pull request'
